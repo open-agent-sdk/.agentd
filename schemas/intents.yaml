@@ -1,0 +1,49 @@
+# schemas/intents.yaml
+
+# Placeholder verb definitions for early agent coordination scaffolding
+# These schemas are non-final and subject to extension
+
+version: 0.1
+
+intents:
+  - id: intent.repo.clone
+    description: Clone a repository from a remote source
+    inputs:
+      - name: repository_url
+        type: string
+        required: true
+      - name: branch
+        type: string
+        required: false
+    outputs:
+      - name: local_path
+        type: string
+    fallback:
+      strategy: local_mirror
+      notes: |
+        If the remote URL is unreachable, fallback to local cache mirror if available.
+
+  - id: intent.file.search
+    description: Search for a file matching a given pattern in a directory
+    inputs:
+      - name: directory
+        type: string
+        required: true
+      - name: pattern
+        type: string
+        required: true
+    outputs:
+      - name: matches
+        type: list
+    fallback:
+      strategy: escalate
+      notes: |
+        If no matches are found, suggest directory index or escalate to user prompt.
+
+metadata:
+  author: anonymous
+  license: Apache-2.0
+  created: 2024-05-21
+  notes: |
+    These intent definitions are experimental and intended for agent runtime scaffolding only.
+    Not intended as a finalized schema format or protocol standard.
