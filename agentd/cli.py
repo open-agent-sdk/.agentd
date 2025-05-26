@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import argparse
-from agentd.runtime.version import RUNTIME_VERSION
+from runtime.version import RUNTIME_VERSION
 
 def main():
     parser = argparse.ArgumentParser(description="agentd CLI - runtime interface")
