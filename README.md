@@ -31,7 +31,7 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## Status
 
-This is a **research-stage runtime** intended for experimentation and prototyping. Early work is focused on execution flow scaffolding and basic CLI interfaces. May evolve or consolidate into other compatibility layers as the coordination ecosystem matures.
+This is a **research-stage runtime** intended for experimentation and prototyping. Early work is focused on execution flow scaffolding and basic CLI interfaces. This may evolve or consolidate into other compatibility layers as the coordination ecosystem matures.
 
 ---
 
