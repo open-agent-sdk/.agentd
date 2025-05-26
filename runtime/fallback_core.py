@@ -10,6 +10,7 @@ execution semantics in environments where MCP or NLWeb are present.
 
 Status: conceptual placeholder. Execution logic pending.
 """
+from runtime.version import RUNTIME_VERSION
 
 def execute_intent(intent_payload):
     # TODO: resolve intent against local schema
@@ -17,5 +18,6 @@ def execute_intent(intent_payload):
     # TODO: log refusal path or escalation
     return {
         "status": "unimplemented",
-        "note": "agentd fallback runtime stub"
+        "note": "agentd fallback runtime stub",
+        "runtime_version": RUNTIME_VERSION
     }
