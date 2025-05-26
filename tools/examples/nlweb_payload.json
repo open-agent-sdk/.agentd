@@ -1,0 +1,9 @@
+{
+  "intent": "set_reminder",
+  "parameters": {
+    "time": "9am",
+    "message": "standup meeting"
+  },
+  "protocol": "NLWeb",
+  "source": "local"
+}
