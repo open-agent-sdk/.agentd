@@ -11,6 +11,13 @@ execution semantics in environments where MCP or NLWeb are present.
 Status: conceptual placeholder. Execution logic pending.
 """
 from runtime.version import RUNTIME_VERSION
+from runtime.identity_guard import validate_session
+
+session_result = validate_session("prod-token-abc", "calendar-agent")
+
+if session_result["status"] != "pass":
+    print("[fallback_core] Warning:", session_result["note"])
+
 
 def execute_intent(intent_payload):
     # TODO: resolve intent against local schema
