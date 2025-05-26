@@ -1,0 +1,6 @@
+{
+  "intent": "fetch_report",
+  "target_agent": "reportbot",
+  "schema_version": "1.0",
+  "transport": "a2a"
+}
